@@ -1,0 +1,1 @@
+Ms. Frank, I made the index.html file, the style.css file in the css folder, and the game.js file in the js folder. The remaining files are from a front-end framework called bootstrap that I integrated into my design.
