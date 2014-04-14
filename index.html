@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Macbeth Game</title>
+	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="css/bootstrap-custom.css">
+	<script src="js/jquery.js"></script>
+</head>
+<body>
+	<!-- Background Image -->
+	<img src="img/bg.jpg" class="bg">
+
+	<!-- Header -->
+	<div id="header">
+		<h1>Macbeth's Fate</h1>
+	</div>
+
+	<!-- Button for modal -->
+	<a id="help" class="btn-link btn-large" data-toggle="modal" data-target="#instruc">Help</a>
+
+	<!-- Modal -->
+	<div class="modal fade" id="instruc" tabindex="-1" role="dialog" aria-labelledby="instrucLabel" aria-hidden="true">
+	  <div class="modal-dialog">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+	        <h1 class="modal-title" style="font-weight: normal;" id="instrucLabel">Instructions</h1>
+	      </div>
+	      <div class="modal-body">
+	      	Determine Macbeth's fate by making decisions for him. Type a command and hit enter.
+	      	<hr>
+	      	<h2>Commands</h2>
+	      	<p>There are two commands: kill and no-kill.
+	      	<h3>kill</h3>
+	      	<p>The "kill" command will be followed by a character's name that Macbeth is approaching or is faced with making a decision about, and Macbeth will <em>attempt</em> to kill the character. For example one might type "kill Banquo".
+	      	<h3>no-kill</h3>
+	      	<p>The "no-kill" command is the command used when Macbeth chooses not to kill anyone. It also can be thought of as the listen-to command in some scenarios. 
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+	<!-- Content -->
+	<div id="wrapper">
+		<div id="content">
+			<div id="game-container">
+				<div id="game-text" class="text">
+					<span style="color: blue">Description</span>:<br>Macbeth is walking home from a victory with Banquo when they approach three witches -- they are creepy. What does Macbeth do?
+				</div>
+				<input id="game-input" class="text" type="text" placeholder="type a command">
+			</div>
+		</div>
+	</div>
+
+	<!-- js -->
+	<script>
+	$("#game-input").keyup(function(event) {
+		if (event.keyCode == 13) {
+			action(this.value);
+		}	
+	});
+	</script>
+	<script src="js/bootstrap.js"></script>
+	<script src="js/game.js"></script>
+</body>
+</html>
