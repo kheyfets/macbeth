@@ -29,7 +29,7 @@ function process(command) {
         $("#game-input").attr("disabled", "true");
         gameOver();
         return false;
-      } else if (command = "kill") {
+      } else if (command.toUpperCase() === "KILL") {
         addText("Must specify a character. Try again!");
       } else {
         addText("Macbeth cannot kill them. Try again!");
